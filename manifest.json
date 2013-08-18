@@ -1,0 +1,32 @@
+{
+   "name":"Facebook Full-size Profile Pictures",
+   "version":"1.3",
+   "manifest_version":2,
+   "description":"Extension to view inaccessible profile pictures in full resolution.",
+   "content_scripts":[
+      {
+         "matches":[
+            "http://www.facebook.com/*",
+            "https://www.facebook.com/*"
+         ],
+         "js":[
+            "fullSizePP.js"
+         ],
+         "css":[
+            "tweaks.css"
+         ]
+      }
+   ],
+   
+   "icons":{
+      "16":"icon16.png",
+      "48":"icon48.png",
+      "128":"icon128.png"
+   },
+
+   "web_accessible_resources":[
+      "promo.png"
+   ],
+
+    "content_security_policy":"script-src 'self'; object-src 'self'"
+}

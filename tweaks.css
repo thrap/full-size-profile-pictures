@@ -1,17 +1,17 @@
 #stalkerFrame {
 	text-align: center; 
-    position: fixed;
-    z-index: 399;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0,0,0,0.9);
+  position: fixed;
+  z-index: 399;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.9);
 }
 
 #stalkerFrame > div {
-    float: right;
-    padding: 20px;
+  float: right;
+  padding: 20px;
 }
 
 #stalkerImage {

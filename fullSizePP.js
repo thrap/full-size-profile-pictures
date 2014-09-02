@@ -14,19 +14,19 @@ function getImageURL(photoElement) {
 function getStalkerFrame(element) {
 	var link = getImageURL(element);
 	return '<div id="stalkerFrame" onclick="this.parentNode.removeChild(this)">'+
-		   '	<div>'+
-		   '		<a target="_blank" href="https://chrome.google.com/webstore/detail/facebook-full-size-profil/agcgdkfpobnjbhhmmelbojdakpehniof">' +
-           '            <img src="'+chrome.extension.getURL('promo.png')+'" />' +
-           '        </a>'+
-		   '	</div>' + 
-		   '	<img id="stalkerImage" style="max-height: '+(window.innerHeight-58)+'px" src="'+link+'" />'+
-	       '</div>';
+	'  <div>'+
+	'    <a target="_blank" href="https://chrome.google.com/webstore/detail/facebook-full-size-profil/agcgdkfpobnjbhhmmelbojdakpehniof">' +
+	'      <img src="'+chrome.extension.getURL('promo.png')+'" />' +
+	'    </a>'+
+	'  </div>' + 
+	'  <img id="stalkerImage" style="max-height: '+(window.innerHeight-58)+'px" src="'+link+'" />'+
+	'</div>';
 }
 
 function clickListener(event) {
 	var element = event.srcElement;
 	if (element.className === 'profilePic img' && !document.getElementById('profile_pic_education')) {
-        document.getElementById('contentArea').innerHTML += getStalkerFrame(element);
+		document.getElementById('contentArea').innerHTML += getStalkerFrame(element);
 	} else {
 		removeStalkerFrame();
 	}

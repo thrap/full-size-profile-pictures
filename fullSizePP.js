@@ -6,9 +6,8 @@ function removeStalkerFrame() {
 }
 
 function getImageURL(photoElement) {
-	var linkArray = photoElement.src.split('\/');
-	var filename = linkArray[linkArray.length-1];
-	return 'https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-ash3/'+filename;
+	var username = location.pathname.substring(1);
+	return 'http://graph.facebook.com/'+username+'/picture?width=999';
 }
 
 function getStalkerFrame(element) {

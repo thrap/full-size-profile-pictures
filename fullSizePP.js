@@ -22,9 +22,9 @@ function getStalkerFrame(element) {
 	'      <img src="'+chrome.extension.getURL('promo.png')+'" />' +
 	'    </a>'+
 	'  </div>' + 
-	'  <div class="donatinsWrapper">'+
+	'  <div class="donationsWrapper">'+
 		   getDonationsButton() +
-	'  	 <div class="donatinsBTC">BTC: 13iB6CdUKNTunbCtAW4WNvohSs4m41D8uU</div>'+
+	'  	 <div class="donationsBTC">BTC: 13iB6CdUKNTunbCtAW4WNvohSs4m41D8uU</div>'+
 	'  </div>' +
 	'  <img id="stalkerImage" style="max-height: '+(window.innerHeight-58)+'px" src="'+link+'" />'+
 	'</div>';
@@ -36,7 +36,7 @@ function clickListener(event) {
 		document.getElementById('contentArea').innerHTML += getStalkerFrame(element);
 	} else {
 		var BTCAddressClicked = Array.prototype.slice.call(event.path).reduce(function(prev, el) {
-		  return prev || el.className === 'donatinsWrapper'
+		  return prev || el.className === 'donationsWrapper'
 		}, false);
 
 		if (!BTCAddressClicked) {

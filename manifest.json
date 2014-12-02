@@ -1,6 +1,6 @@
 {
    "name":"Facebook Full-size Profile Pictures",
-   "version":"1.4.0",
+   "version":"1.5.0",
    "manifest_version": 2,
    "description":"Extension to view inaccessible profile pictures in full resolution.",
    "content_scripts":[
